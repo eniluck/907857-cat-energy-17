@@ -2,9 +2,6 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-}
-
-.page-header__logo-wrapper {
   padding-top: 11px;
   padding-bottom: 15px;
 }
@@ -12,16 +9,15 @@
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
-  }
-
-  .page-header__logo-wrapper {
+    justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 24px;
   }
+
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__logo-wrapper {
+  .page-header {
     padding-top: 53px;
     padding-bottom: 53px;
   }
