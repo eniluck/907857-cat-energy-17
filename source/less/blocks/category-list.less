@@ -1,4 +1,10 @@
 .category-list {
+  .reset-ul();
+  display: flex;
+  flex-direction: column;
+}
+
+.category-list__item {
   background-color: #f2f2f2;
   padding-left: 20px;
   padding-right: 20px;
@@ -30,3 +36,10 @@
   line-height: 16px;
   color: #111111;
 }
+
+@media (min-width: @desktop-width) {
+  .category-list {
+    flex-direction: row;
+  }
+}
+
