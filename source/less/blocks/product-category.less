@@ -1,4 +1,17 @@
 .product-category {
   background-color: #ffffff;
   margin-bottom: 2px;
+  width: @mobile-content;
+}
+
+@media (min-width: @tablet-width) {
+  .product-category{
+    width: @tablet-content;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-category {
+    width: @desktop-content;
+  }
 }

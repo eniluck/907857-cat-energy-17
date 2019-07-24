@@ -1,20 +1,20 @@
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: @tablet-padding;
+    padding-right: @tablet-padding;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: @desktop-padding;
+    padding-right: @desktop-padding;
   }
 }
