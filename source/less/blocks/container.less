@@ -1,5 +1,20 @@
 .container {
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
   margin-left: auto;
   margin-right: auto;
-  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding-left: @tablet-padding;
+    padding-right: @tablet-padding;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    padding-left: @desktop-padding;
+    padding-right: @desktop-padding;
+  }
 }

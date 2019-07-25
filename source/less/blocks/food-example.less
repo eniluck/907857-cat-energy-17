@@ -4,6 +4,7 @@
   padding-top: 29px;
   padding-bottom: 2px;
   margin-bottom: 22px;
+  width: @mobile-content;
 }
 
 .food-example__title {
@@ -36,4 +37,16 @@
 .food-example__button {
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .food-example {
+    width: @tablet-content;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .food-example {
+    width: @desktop-content;
+  }
 }
