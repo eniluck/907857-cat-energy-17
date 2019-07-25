@@ -1,6 +1,7 @@
 .catalog {
   background-color: #ffffff;
   font-family: @font-main;
+  width: @mobile-content;
 }
 
 .catalog__list {
@@ -60,6 +61,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .catalog {
+    width: @tablet-content;
+  }
+
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -71,6 +76,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    width: @desktop-content;
+  }
+
   .catalog__item {
     width: 245px;
   }
