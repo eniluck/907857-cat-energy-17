@@ -1,8 +1,12 @@
 .page-footer {
   background-color: #f2f2f2;
+}
+
+.page-footer__wrapper {
   padding-bottom: 22px;
   display: flex;
   flex-direction: column;
+  width: @mobile-content;
 }
 
 .page-footer__logo {
@@ -11,8 +15,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: @tablet-content;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: @desktop-content;
   }
 }
