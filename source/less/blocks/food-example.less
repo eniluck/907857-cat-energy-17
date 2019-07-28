@@ -77,9 +77,6 @@
 @media (min-width: @tablet-width) {
   .food-example {
     width: @tablet-content;
-    margin-bottom: 0;
-    padding-left: 120px;
-    padding-right: 120px;
 
     &::before {
       display: none;
@@ -90,6 +87,8 @@
     height: auto;
     text-align: left;
     margin-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .food-example__title {
@@ -116,7 +115,7 @@
     max-width: initial;
     width: 709px;
     height: 609px;
-    left: -90px;
+    left: -30px;
     top: 0;
   }
 
@@ -124,23 +123,34 @@
     width: 245px;
     height: 52px;
     margin-bottom: 529px;
+    margin-left: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .food-example {
-    width: 1140px;
-    padding-left: 190px;
-    padding-right: 190px;
+    width: @desktop-content;
     position: relative;
   }
 
   .food-example__image-wrapper {
-    height: 0px;
+    height: 0;
   }
 
   .food-example__image {
     top: -200px;
-    left: 560px - 190px;
+    left: initial;
+    right: 215px;
+    width: 552px;
+    height: 499px;
+  }
+
+  .food-example__button {
+    margin-left: 80px;
+  }
+
+  .food-example__title-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
