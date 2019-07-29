@@ -13,6 +13,7 @@
 .catalog__item {
   padding-bottom: 25px;
   width: 320px;
+  border: solid 1px #ededed;
 }
 
 .catalog__product-name {
@@ -21,12 +22,29 @@
   font-weight: 400;
   margin-top: 25px;
   margin-bottom: 18px - 2px - 2px;
+  color: #111111;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 75px;
+  margin-top: 25px;
+}
+
+.catalog__image {
+  float: left;
 }
 
 .catalog__description {
   font-family: @font-2;
   font-size: 12px;
   line-height: 16px;
+  width: 141px;
+  margin-bottom: 23px;
+}
+
+.catalog__description tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog__button {
