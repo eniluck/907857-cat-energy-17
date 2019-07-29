@@ -15,9 +15,38 @@
   padding-top: 6px - 4px;
   padding-bottom: 6px - 4px;
   padding-left: 80px;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #68b738;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--leaf::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
+
+  &--cutlery::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
+
+  &--clock::before {
+    background-image: url("../../img/advantage-clock@1x.png");
   }
 }
 
@@ -34,11 +63,20 @@
   font-weight: 400;
   line-height: 18px;
   color: #444444;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .how-it-works {
     width: @tablet-content;
+    counter-reset: section;
+  }
+
+  .how-it-works__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+    margin-bottom: 63px;
   }
 
   .how-it-works__list {
@@ -47,16 +85,44 @@
   }
 
   .how-it-works__item {
-    width: 325px;
+    width: 245px;
     height: 228px;
     padding-top: 119px;
     padding-left: 0;
+    position: relative;
 
-    &:not(:last-child) {
-      margin-bottom: auto;
-      padding-left: 0;
+    &:nth-child(2n+1) {
       margin-right: auto;
     }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+
+    &::after {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      right: 0;
+      top: 0;
+      /*width: 71px;
+      height: 228px;*/
+      font-family: @font-main;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 200px;
+      color: #f2f2f2;
+      z-index: 0;
+    }
+  }
+
+  .how-it-works__text {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 10;
   }
 }
 
@@ -67,5 +133,13 @@
 
   .how-it-works__item {
     width: 245px;
+
+    &:nth-child(n) {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: auto;
+    }
   }
 }
