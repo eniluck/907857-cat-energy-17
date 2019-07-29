@@ -1,5 +1,35 @@
 .social {
   background-color: #f2f2f2;
-  padding-top: 22px;
+  .reset-ul();
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  padding-top: 24px;
   padding-bottom: 21px;
+  display: flex;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--vkontakte {
+    background-image: url("../../img/icon-vk.svg");
+  }
+
+  &--instagram {
+    background-image: url("../../img/icon-insta.svg");
+  }
+
+  &--facebook {
+    background-image: url("../../img/icon-fb.svg");
+  }
 }
