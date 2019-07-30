@@ -1,7 +1,6 @@
 .catalog {
   background-color: #ffffff;
   font-family: @font-main;
-  width: @mobile-content;
 }
 
 .catalog__list {
@@ -12,8 +11,15 @@
 
 .catalog__item {
   padding-bottom: 25px;
-  width: 320px;
   border: solid 1px #ededed;
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catalog__item-wrapper {
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
 }
 
 .catalog__product-name {
@@ -37,7 +43,7 @@
   font-family: @font-2;
   font-size: 12px;
   line-height: 16px;
-  width: 141px;
+  width: 140px;
   margin-bottom: 23px;
 }
 
