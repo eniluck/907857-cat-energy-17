@@ -62,15 +62,17 @@
   }
 
   .page-header--index {
-    position: relative;
+
 
     &::before {
       content: "";
       position: absolute;
+      //max-width: 720px;
+      //width: calc(100vw - 120px - 50%);
       width: 720px;
       height: 696px;
       top: 0;
-      right: 0;
+      left: 50%;
       background-color: #68b738;
       background-image: url("../../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;

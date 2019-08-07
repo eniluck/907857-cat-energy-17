@@ -1,20 +1,21 @@
 .container {
-  padding-left: @mobile-padding;
-  padding-right: @mobile-padding;
+  width: @mobile-content;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    padding-left: @tablet-padding;
-    padding-right: @tablet-padding;
+    width: @tablet-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    padding-left: @desktop-padding;
-    padding-right: @desktop-padding;
+    width: @desktop-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
