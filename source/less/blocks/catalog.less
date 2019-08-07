@@ -14,7 +14,7 @@
   width: 75px;
 
   margin-top: 23px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   font-size: 16px;
   line-height: 20px;
@@ -67,7 +67,8 @@
     width: 31px;
     height: 31px;
     background-image: url("../../img/icon-plus-mobile.svg");
-    background-size: 31px;
+    //background-size: 31px;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 }
@@ -122,8 +123,8 @@
 @media (min-width: @tablet-width) {
   .catalog {
     width: @tablet-content;
-    margin-left: @tablet-padding;
-    margin-right: @tablet-padding;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .catalog__list {
@@ -136,13 +137,19 @@
   .catalog__item {
     width: 324px;
     padding-top: 100px;
+    margin-bottom: 41px;
+
+    &:nth-last-child(1) .catalog__item-container{
+      background-color: transparent;
+      box-shadow: 0 0 0 1px #666666 inset;
+    }
   }
 
   .catalog__item-container {
-    padding-left: 29px;
+    padding-left: 39px;
     padding-right: 37px;
     padding-bottom: 40px;
-    padding-top: 165px;
+    padding-top: 140px;
     background-color: #f2f2f2;
     position: relative;
   }
@@ -170,17 +177,64 @@
   }
 
   .catalog__product-name {
-    width: 124px;
+    width: 138px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: 10px;
     font-size: 20px;
     line-height: 20px;
     color: #111111;
+    margin-bottom: 24px;
   }
 
   .catalog__description {
     width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 23px;
+  }
+
+  .catalog__description tr {
+    margin-bottom: 16px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -8px;
+      background-color: #666666;
+    }
+  }
+
+  .catalog__more {
+    padding-top: 23px;
+    padding-bottom: 0;
+    &::after {
+      width: 61px;
+      height: 61px;
+      background-image: url("../../img/icon-plus.svg");
+      top: -20px;
+      display: none;
+    }
+  }
+
+  .catalog__text-more {
+    font-size: 20px;
+    line-height: 20px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+  }
+
+  .catalog__text-info {
+    font-size: 16px;
+    line-height: normal;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 85px;
   }
 }
 
