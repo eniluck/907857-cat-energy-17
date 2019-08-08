@@ -1,4 +1,4 @@
-.food-example {
+.food-example__row {
   position: relative;
   z-index: 100;
   font: @font-main;
@@ -7,7 +7,6 @@
   padding-top: 25px;
   padding-bottom: 2px;
   margin-bottom: 18px;
-  width: @mobile-content;
 
   &::before {
     content: "";
@@ -75,8 +74,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .food-example {
-    width: @tablet-content;
+  .food-example__row {
     padding-top: 17px;
 
     &::before {
@@ -131,8 +129,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .food-example {
-    width: @desktop-content;
+  .food-example__row {
     position: relative;
     padding-top: 39px;
     margin-bottom: 25px;

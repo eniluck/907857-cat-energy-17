@@ -2,11 +2,10 @@
   background-color: #f2f2f2;
 }
 
-.page-footer__wrapper {
+.page-footer__row {
   padding-bottom: 22px;
   display: flex;
   flex-direction: column;
-  width: @mobile-content;
   align-items: center;
 }
 
@@ -44,10 +43,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__wrapper {
+  .page-footer__row {
     flex-direction: row;
-    //justify-content: space-between;
-    width: @tablet-content;
   }
 
   .page-footer__logo {
@@ -60,10 +57,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer__wrapper {
-    width: @desktop-content;
-  }
-
   .page-footer__logo {
     margin-right: 412px;
   }
