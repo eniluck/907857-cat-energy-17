@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+.catalog__item-row-header {
+  display: flex;
+}
+
 .catalog__product-name {
   display: inline-block;
   width: 75px;
@@ -23,7 +27,6 @@
   color: #111111;
   text-transform: uppercase;
 }
-
 
 .catalog__description {
   font-family: @font-2;
@@ -67,8 +70,7 @@
     width: 31px;
     height: 31px;
     background-image: url("/img/icon-plus-mobile.svg");
-    //background-image: url("/source/img/");
-    //background-size: 31px;
+
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -100,7 +102,7 @@
 
 @media (max-width: @tablet-width - 1px) {
   .catalog__item {
-    padding-bottom: 24px;
+    padding-bottom: 22px;
     border: solid 1px #ededed;
     width: @mobile-width;
     margin-left: auto;
@@ -109,15 +111,6 @@
     &:not(:first-child) {
       border-top: none;
     }
-  }
-
-  .catalog__item-container {
-    padding-left: @mobile-padding;
-    padding-right: @mobile-padding;
-  }
-
-  .catalog__image {
-    float: left;
   }
 }
 
@@ -131,7 +124,6 @@
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
-    //width: @tablet-content;
     justify-content: space-between;
   }
 
@@ -140,19 +132,19 @@
     padding-top: 100px;
     margin-bottom: 41px;
 
-    &:nth-last-child(1) .catalog__item-container {
+    &:nth-last-child(1) .catalog__item-row {
       background-color: transparent;
       box-shadow: 0 0 0 1px #666666 inset;
     }
   }
 
-  .catalog__item-container {
-    padding-left: 39px;
-    padding-right: 37px;
-    padding-bottom: 40px;
-    padding-top: 140px;
+  .catalog__item-row {
     background-color: #f2f2f2;
     position: relative;
+    width: 324px;
+    padding-top: 140px;
+    padding-bottom: 40px;
+
   }
 
   .catalog__image-wrapper {
@@ -169,18 +161,19 @@
 
   .catalog__image {
     width: 100%;
-    //height: 208px;
     max-width: initial;
   }
 
   .catalog__info-wrapper {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 249px;
   }
 
   .catalog__product-name {
     width: 138px;
     text-align: center;
-    //margin-left: 10px;
     font-size: 20px;
     line-height: 20px;
     color: #111111;
@@ -237,6 +230,12 @@
     margin-right: auto;
     margin-bottom: 85px;
   }
+
+  .catalog__button {
+    width: 249px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -247,5 +246,17 @@
   .catalog__item {
     width: 245px;
     margin-bottom: 45px;
+  }
+
+  .catalog__item-row {
+    width: 245px;
+  }
+
+  .catalog__info-wrapper {
+    width: 169px;
+  }
+
+  .catalog__button {
+    width: 169px;
   }
 }
