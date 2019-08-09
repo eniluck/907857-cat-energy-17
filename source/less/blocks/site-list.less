@@ -24,18 +24,19 @@
 }
 
 @media (max-width: @tablet-width - 1px) {
+  //Декоративная линия только на мобильных экранах
   .site-list__item {
     position: relative;
-  }
 
-  .site-list__item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    width: 320px;
-    height: 1px;
-    background-color: #e6e6e6;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: 320px;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
   }
 }
 
