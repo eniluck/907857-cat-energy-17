@@ -29,10 +29,6 @@
   display: block;
 }
 
-.page-header__toggle--close {
-  display: none;
-}
-
 @media (max-width: @tablet-width - 1px) {
   //Декоративная линия только на мобильных экранах
   .page-header__logo-wrapper::after {
@@ -43,6 +39,11 @@
     width: 320px;
     height: 1px;
     background-color: #e6e6e6;
+  }
+
+  //только для мобильных экранов
+  .page-header__toggle--close {
+    display: none;
   }
 }
 
