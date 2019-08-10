@@ -103,61 +103,64 @@
       </div>
     </section>
     <section class="live-example">
-      <div class="container">
-        <h2 class="live-example__title">
-          Живой пример
-        </h2>
-        <p class="live-example__info">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="live-example__result">
-          <ul class="live-example__indicator-list">
-            <li class="live-example__indicator-item">
-              <p class="live-example__indicator-number">5&nbsp;кг</p>
-              <p class="live-example__indicator-desc">
-                  снижение веса
-              </p>
-            </li>
-            <li class="live-example__indicator-item">
-              <p class="live-example__indicator-number">60&nbsp;дней</p>
-              <p class="live-example__indicator-desc">
-                  затрачено времени
-              </p>
-            </li>
-          </ul>
-          <p class="live-example__cost">
-            <span class="live-example__cost-line">Затраты на питание:</span>
-            <span class="live-example__cost-line">15 000 руб.</span>
+      <div class="live-example__row container">
+        <div class="live-example__text-info">
+          <h2 class="live-example__title">
+            Живой пример
+          </h2>
+          <p class="live-example__info">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
+          <div class="live-example__result">
+            <ul class="live-example__indicator-list">
+              <li class="live-example__indicator-item">
+                <p class="live-example__indicator-number">5&nbsp;кг</p>
+                <p class="live-example__indicator-desc">
+                    снижение веса
+                </p>
+              </li>
+              <li class="live-example__indicator-item">
+                <p class="live-example__indicator-number">60&nbsp;дней</p>
+                <p class="live-example__indicator-desc">
+                    затрачено времени
+                </p>
+              </li>
+            </ul>
+            <p class="live-example__cost">
+              <span class="live-example__cost-line">Затраты на питание:</span>
+              <span class="live-example__cost-line">15 000 руб.</span>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="live-example__preview">
-        <div class="live-example__carousel">
-          <div class="live-example__image-container live-example__carousel-image--before ">
-            <div class="live-example__image-cutter">
+
+        <div class="live-example__preview">
+          <div class="live-example__carousel">
+            <div class="live-example__image-container live-example__carousel-image--before ">
+              <div class="live-example__image-cutter">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                  <img class="live-example__carousel-image" src="img/before-mobile@1x.png" alt="Было" width="320" height="240">
+                </picture>
+              </div>
+            </div>
+            <div class="live-example__image-container live-example__carousel-image--after">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                <img class="live-example__carousel-image" src="img/before-mobile@1x.png" alt="Было" width="320" height="240">
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img class="live-example__carousel-image" src="img/after-mobile@1x.png" alt="Стало" width="320" height="240">
               </picture>
             </div>
           </div>
-          <div class="live-example__image-container live-example__carousel-image--after">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-              <img class="live-example__carousel-image" src="img/after-mobile@1x.png" alt="Стало" width="320" height="240">
-            </picture>
+          <div class="live-example__carousel-controls">
+            <div class="live-example__slider-before-after">
+              <div class="live-example__slider-control"></div>
+            </div>
+            <button class="live-example__button-control live-example__button--control-before" type="button">Было</button>
+            <button class="live-example__button-control live-example__button--control-after" type="button">Стало</button>
           </div>
-        </div>
-        <div class="live-example__carousel-controls">
-          <div class="live-example__slider-before-after">
-            <div class="live-example__slider-control"></div>
-          </div>
-          <button class="live-example__button-control live-example__button--control-before" type="button">Было</button>
-          <button class="live-example__button-control live-example__button--control-after" type="button">Стало</button>
         </div>
       </div>
     </section>
