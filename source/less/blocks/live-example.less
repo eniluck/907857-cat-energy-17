@@ -8,6 +8,10 @@
 .live-example__preview {
   position: relative;
   left: -20px;
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
 }
 
 .live-example__title {
@@ -92,13 +96,6 @@
   margin-bottom: 34px;
 }
 
-.live-example__preview {
-  width: @mobile-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 40px;
-}
-
 .live-example__carousel {
   margin-bottom: 32px;
   position: relative;
@@ -108,7 +105,7 @@
 
 .live-example__image-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
 }
 
@@ -185,7 +182,9 @@
   .live-example__preview {
     position: static;
     left: unset;
+    width: @tablet-content;
   }
+
 
   .live-example__carousel-image--hidden {
     display: block;
@@ -232,9 +231,6 @@
 
   .live-example__indicator-desc {
     width: 130px;
-    //display: block;
-    //width: auto;
-    //padding: 7px;
     font-size: 14px;
     line-height: 14px;
     padding-left: 7px;
@@ -260,10 +256,6 @@
     display: inline;
   }
 
-  .live-example__preview {
-    width: @tablet-content;
-  }
-
   .live-example__carousel {
     height: 517px;
     width: 100%;
@@ -275,8 +267,8 @@
 
   .live-example__carousel-image {
     max-width: unset;
-    width: 320px;
-    height: 240px;
+    width: 690px;
+    height: auto;
   }
 
   .live-example__image-container {
@@ -290,12 +282,6 @@
     max-width: 338px; //тут изменяем изображение открывается
     overflow: hidden;
     height: 517px;
-
-  }
-
-  .live-example__carousel-image {
-    width: 690px;
-    height: auto;
   }
 
   .live-example__carousel-image--after {
@@ -323,17 +309,14 @@
   .live-example__button-control {
     font-size: 20px;
     line-height: 20px;
-    //position: relative;
 
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 1px;
-      //background-color: red;
       bottom: -5px;
       left: 0;
-      //opacity: 0.23;
       border-bottom: 1px dotted red;
     }
   }
