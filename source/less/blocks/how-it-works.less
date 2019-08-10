@@ -1,6 +1,6 @@
 .how-it-works {
   background-color: #ffffff;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 }
 
 .how-it-works__list {
@@ -75,6 +75,7 @@
   .how-it-works {
     counter-reset: section;
     padding-top: 29px;
+    margin-bottom: 0;
   }
 
   .how-it-works__title {
@@ -89,16 +90,20 @@
     flex-wrap: wrap;
   }
 
+  .how-it-works__list .how-it-works__item {
+    margin-bottom: 75px;
+    &:nth-last-child(-n+2) {
+      margin-bottom: 55px;
+    }
+  }
+
   .how-it-works__item {
     width: 245px;
-    height: 179px;
+    height: 120px;
     padding-top: 122px;
     padding-left: 0;
     position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: 13px;
-    }
+    padding-bottom: 0;
 
     &:nth-child(2n+1) {
       margin-right: 139px;
@@ -126,8 +131,6 @@
       position: absolute;
       left: 110px;
       top: 10px;
-      /*width: 71px;
-      height: 228px;*/
       font-family: @font-main;
       font-size: 281px;
       font-weight: 400;

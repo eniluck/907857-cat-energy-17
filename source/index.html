@@ -128,22 +128,32 @@
             </li>
           </ul>
           <p class="live-example__cost">
-              Затраты на питание: 15 000 руб.
+            <span class="live-example__cost-line">Затраты на питание:</span>
+            <span class="live-example__cost-line">15 000 руб.</span>
           </p>
         </div>
       </div>
       <div class="live-example__preview">
-          <div class="live-example__carousel">
+        <div class="live-example__carousel">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
             <img class="live-example__carousel-image" src="img/before-mobile@1x.png" alt="Было" >
+          </picture>
+
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
             <img class="live-example__carousel-image live-example__carousel-image--hidden" src="img/after-mobile@1x.png" alt="Стало" >
+          </picture>
+        </div>
+        <div class="live-example__carousel-controls">
+          <div class="live-example__slider-before-after">
+            <div class="live-example__slider-control"></div>
           </div>
-          <div class="live-example__carousel-controls">
-            <div class="live-example__slider-before-after">
-              <div class="live-example__slider-control"></div>
-            </div>
-            <button class="live-example__button-control live-example__button--control-before" type="button">Было</button>
-            <button class="live-example__button-control live-example__button--control-after" type="button">Стало</button>
-          </div>
+          <button class="live-example__button-control live-example__button--control-before" type="button">Было</button>
+          <button class="live-example__button-control live-example__button--control-after" type="button">Стало</button>
+        </div>
       </div>
     </section>
     <section class="location">
