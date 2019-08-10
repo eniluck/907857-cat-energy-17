@@ -19,6 +19,11 @@
     background-color: #68b738;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 }
 
@@ -54,11 +59,6 @@
 }
 
 .food-example__title-wrapper {
-  //background-color: #68b738;
-  /*background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position-x: top;
-  background-position-y: center;*/
   position: relative;
   z-index: 10;
   height: 305px;
