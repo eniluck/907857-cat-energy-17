@@ -1,26 +1,100 @@
-.page-header {
+.page-header__row {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+}
+
+.page-main__header {
+  font-size: 36px;
+  line-height: 60px;
+  color: #111111;
+  font-weight: 400;
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 11px;
   padding-bottom: 15px;
-  width: @mobile-content;
+  position: relative;
+}
+
+.page-header__logo-image {
+  width: 191px;
+  height: 39px;
+}
+
+.page-header__toggle--open {
+  display: block;
+}
+
+@media (max-width: @tablet-width - 1px) {
+  //Декоративная линия только на мобильных экранах
+  .page-header__logo-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  //только для мобильных экранов
+  .page-header__toggle--close {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__row {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 24px;
+    padding-top: 12px;
     padding-bottom: 24px;
-    width: @tablet-content;
+    align-items: center;
+  }
+
+  .page-header__logo-image {
+    width: 174px;
+    height: 59px;
+  }
+
+  .page-header__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    padding-top: 53px;
-    padding-bottom: 53px;
-    width: @desktop-content;
+  .page-header__row {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .page-header--index {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 696px;
+      top: 0;
+      //left: 50%;
+      right: 0;
+      background-color: #68b738;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position-x: left;
+      z-index: 0;
+    }
+  }
+
+  .page-header__logo-image {
+    width: 203px;
+    height: 60px;
+  }
+
+  .page-header__toggle {
+    margin-top: 2px;
   }
 }

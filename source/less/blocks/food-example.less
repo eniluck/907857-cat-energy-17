@@ -1,52 +1,161 @@
-.food-example {
+.food-example__row {
+  position: relative;
+  z-index: 100;
+  font: @font-main;
   font-weight: 400;
   color: #ffffff;
-  padding-top: 29px;
+  padding-top: 25px;
   padding-bottom: 2px;
-  margin-bottom: 22px;
-  width: @mobile-content;
+  margin-bottom: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 320px;
+    height: 305px;
+    top: 0;
+    left: -20px;
+    background-color: #68b738;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+  }
 }
 
 .food-example__title {
   font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
   margin-top: 0;
-  margin-bottom: 19px;
+  margin-bottom: 26px;
+  text-align: center;
 }
 
 .food-example__slogan {
+  display: block;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
 }
 
 .food-example__image-wrapper {
   background-color: #ffffff;
+  position: relative;
+  height: 110px;
+  z-index: 20;
+}
+
+.food-example__image {
+  width: 280px;
+  height: 270px;
+  position: absolute;
+  top: -165px;
 }
 
 .food-example__title-wrapper {
-  background-color: #68b738;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  //background-color: #68b738;
+  /*background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position-x: top;
-  background-position-y: center;
-
-  padding-left: 17px;
-  padding-right: 17px;
+  background-position-y: center;*/
+  position: relative;
+  z-index: 10;
+  height: 305px;
+  text-align: center;
 }
 
 .food-example__button {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
+  z-index: 30;
 }
 
 @media (min-width: @tablet-width) {
-  .food-example {
-    width: @tablet-content;
+  .food-example__row {
+    padding-top: 17px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .food-example__title-wrapper {
+    height: auto;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+
+  .food-example__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+    text-align: left;
+    width: 415px;
+    font-weight: 400;
+    margin-bottom: 41px;
+  }
+
+  .food-example__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+  }
+
+  .food-example__image-wrapper {
+    height: 18px;
+  }
+
+  .food-example__image {
+    max-width: initial;
+    width: 709px;
+    height: 609px;
+    left: 0;
+    top: -10px;
+  }
+
+  .food-example__button {
+    width: 245px;
+    height: 52px;
+    margin-bottom: 510px;
+    margin-left: 89px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .food-example {
-    width: @desktop-content;
+  .food-example__row {
+    position: relative;
+    padding-top: 39px;
+    margin-bottom: 25px;
+    margin-top: 11px;
+  }
+
+  .food-example__image-wrapper {
+    height: 0;
+  }
+
+  .food-example__image {
+    top: -313px;
+    left: initial;
+    right: 217px;
+    width: 552px;
+    height: 499px;
+  }
+
+  .food-example__button {
+    margin-left: 80px;
+    margin-bottom: 240px;
+  }
+
+  .food-example__title-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 53px;
   }
 }

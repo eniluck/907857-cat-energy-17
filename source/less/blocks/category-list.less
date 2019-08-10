@@ -5,11 +5,23 @@
 }
 
 .category-list__item {
+  position: relative;
   background-color: #f2f2f2;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 24px;
+  padding-top: 23px;
   padding-bottom: 22px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #68b738;
+    top: 24px;
+    left: 22px;
+    border-radius: 50%;
+  }
 }
 
 .category-list__item:not(:last-child) {
@@ -20,18 +32,23 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
-  color: #000000;
-  padding-top: 7px;
-  padding-bottom: 7px + 24px;
+  color: #111111;
+  //padding-bottom: 7px + 24px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  padding-left: 72px;
 }
 
 .category-list__item-desc {
+  display: inline-block;
   font-family: @font-2;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   color: #444444;
-  padding-bottom: 44px - 4px;
+  margin-bottom: 40px;
 }
 
 .category-list__item-link {
@@ -39,11 +56,123 @@
   font-weight: 400;
   line-height: 16px;
   color: #111111;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 12px;
+    right: -25px - 11px;
+    top: 7px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+  }
+}
+
+.category-list__item-image {
+  position: absolute;
+}
+
+
+@media (max-width: @tablet-width - 1px) {
+
+  //Декоративная линия только на мобильных экранах
+  .category-list__item-link {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 1px;
+      left: 0;
+      top: -16px;
+      background-color: #d9d9d9;
+    }
+  }
+}
+
+.category-list__item-image--pro {
+  top: 35px;
+  left: 13px;
+}
+
+.category-list__item-image--slim {
+  top: 22px;
+  left: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .category-list__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  .category-list__item-title {
+    font-size: 36px;
+    line-height: 37px;
+    color: #111111;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .category-list__item-image {
+    left: unset;
+  }
+
+  .category-list__item-image--pro {
+    top: 135px;
+    right: 28px;
+    width: 268px;
+    height: 113px;
+  }
+
+  .category-list__item-image--slim {
+    top: 80px;
+    right: 92px;
+    width: 141px;
+    height: 194px;
+  }
+
+  .category-list__item-desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #444444;
+    margin-bottom: 56px;
+  }
+
+  .category-list__item-link {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+
+    &::after {
+      right: -47px;
+      top: 9px;
+    }
+  }
+
+  .category-list__item {
+    padding-right: 280px;
+    padding-top: 75px;
+    padding-left: 52px;
+    padding-bottom: 60px;
+
+    &::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background-color: #68b738;
+      top: 90px;
+      right: 62px;
+      left: unset;
+      border-radius: 50%;
+    }
+
+    &:nth-child(2) .category-list__item-desc {
+      display: inline-block;
+      width: 340px;
+    }
   }
 }
 
@@ -54,10 +183,54 @@
 
   .category-list__item {
     width: 570px;
+    padding-right: 52px;
+    padding-top: 47px;
+    padding-left: 52px;
+    padding-bottom: 62px;
+
+    &::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-color: #68b738;
+      top: 47px;
+      left: 52px;
+      border-radius: 50%;
+    }
   }
 
   .category-list__item:not(:last-child) {
     margin-bottom: auto;
     margin-right: 80px;
+  }
+
+  .category-list__item-image--pro {
+    top: 69px;
+    left: 34px;
+    width: 134px;
+    height: 57px;
+  }
+
+  .category-list__item-image--slim {
+    top: 41px;
+    left: 65px;
+    width: 71px;
+    height: 97px;
+  }
+
+  .category-list__item-title {
+    font-size: 36px;
+    line-height: 37px;
+    margin-bottom: 59px;
+    margin-left: 163px;
+    margin-top: 30px;
+  }
+
+  .category-list__item-desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #444444;
+    margin-bottom: 30px;
   }
 }

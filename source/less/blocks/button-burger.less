@@ -1,1 +1,29 @@
-/*.button-burger*/
+.button-burger {
+  position: relative;
+
+  display: block;
+  width: 25px;
+  height: 19px;
+
+  background-color: #ffffff;
+  border: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 19px;
+    background: url("/img/icon-mobile-menu.svg") no-repeat;
+  }
+}
+
+.button-burger--open::before {
+  background: url("/img/icon-mobile-menu.svg") no-repeat;
+}
+
+.button-burger--close::before {
+  background: url("/img/icon-close.svg") no-repeat;
+}
