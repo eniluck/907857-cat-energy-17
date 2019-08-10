@@ -186,6 +186,7 @@
 
   .live-example__result {
     display: flex;
+    margin-bottom: 52px;
   }
 
   .live-example__indicator-list {
@@ -223,11 +224,113 @@
     display: inline;
   }
 
-  .live-example__carousel {
-    height: 520px;
+  .live-example__preview {
+    width: @tablet-content;
   }
 
+  .live-example__carousel {
+    height: 517px;
+    width: 100%;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 26px;
+  }
+
+
   .live-example__carousel-image {
-    height: 298px;
+    max-width: unset;
+  }
+
+  .live-example__image-container {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .live-example__image-cutter {
+    max-width: 338px; //тут изменяем изображение открывается
+    overflow: hidden;
+    height: 517px;
+    background-color: #f2f2f2;
+  }
+
+  .live-example__carousel-image--after {
+    z-index: 10;
+    width: 690px;
+    bottom: -1px;
+  }
+
+  .live-example__carousel-image--before {
+    z-index: 20;
+    width: 690px;
+    bottom: 1px;
+  }
+
+  .live-example__slider-before-after {
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+    border: none;
+  }
+
+  .live-example__carousel-controls {
+    width: 428px;
+  }
+
+  .live-example__button-control {
+    font-size: 20px;
+    line-height: 20px;
+    //position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      //background-color: red;
+      bottom: -5px;
+      left: 0;
+      //opacity: 0.23;
+      border-bottom: 1px dotted red;
+    }
+  }
+
+  .live-example__slider-control {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #cdcdcd;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #68b738;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .live-example__button--control-before {
+    left: -25px;
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+
+  .live-example__button--control-after {
+    right: -20px;
+    top: 50%;
+    transform: translate(100%, -50%);
   }
 }

@@ -135,17 +135,22 @@
       </div>
       <div class="live-example__preview">
         <div class="live-example__carousel">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-            <img class="live-example__carousel-image" src="img/before-mobile@1x.png" alt="Было" >
-          </picture>
-
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-            <img class="live-example__carousel-image live-example__carousel-image--hidden" src="img/after-mobile@1x.png" alt="Стало" >
-          </picture>
+          <div class="live-example__image-container live-example__carousel-image--before ">
+            <div class="live-example__image-cutter">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="live-example__carousel-image" src="img/before-mobile@1x.png" alt="Было" >
+              </picture>
+            </div>
+          </div>
+          <div class="live-example__image-container live-example__carousel-image--after">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+              <img class="live-example__carousel-image" src="img/after-mobile@1x.png" alt="Стало" >
+            </picture>
+          </div>
         </div>
         <div class="live-example__carousel-controls">
           <div class="live-example__slider-before-after">
