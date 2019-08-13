@@ -111,5 +111,92 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+}
 
+@media (min-width: @tablet-width) {
+  .more-goods__title-wrapper {
+    width: @tablet-width;
+    &::before{
+      top: 46px;
+    }
+  }
+  .more-goods__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: @tablet-padding;
+    padding-left: 37px;
+    padding-right: 37px;
+    top: 24px;
+  }
+
+  .more-goods__item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .more-goods__item-title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  .more-goods__button {
+    width: 100%;
+  }
+
+  .more-goods__price {
+    width: 95px;
+    text-align: right;
+  }
+
+  .more-goods__item {
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    border: 1px solid red;
+    border-bottom: none;
+  }
+
+  .more-goods__desc {
+    margin: 0;
+  }
+
+  .more-goods__item-row {
+    margin-bottom: 20,px;
+  }
+
+  .more-goods__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .more-goods__title-wrapper {
+    margin-bottom: 48px;
+  }
+
+  .more-goods__list {
+    margin-bottom: 70px;
+  }
+  .more-goods__stock {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: @tablet-content;
+    height: 200px;
+
+    &::before {
+      left: 120px;
+      top: 65px;
+    }
+  }
+
+  .more-goods__stock {
+    padding-top: 75px;
+    padding-left: 306px;
+  }
+
+  .more-goods__stock-text {
+    text-align: left;
+  }
 }
