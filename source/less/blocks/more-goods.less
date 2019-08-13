@@ -1,0 +1,116 @@
+.more-goods__title-wrapper {
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-top: 30px;
+  margin-bottom: 50px;*/
+  background-color: #ffffff;
+  background-size: 3px;
+  position: relative;
+  height: 88px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #68b738;
+    z-index: 15;
+    left: 0;
+    /*top: 50%;
+    transform: translateY(-50%);*/
+    top: 44px;
+  }
+}
+
+.more-goods__title {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  z-index: 20;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
+
+}
+
+.more-goods__list {
+  .reset-ul();
+  margin-bottom: 40px;
+}
+
+.more-goods__item {
+  padding-top: 13px;
+  padding-bottom: 17px;
+  border-top: 1px solid red; //#f2f2f2
+
+  &:last-child {
+    border-bottom: 1px solid red;
+  }
+}
+
+.more-goods__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.more-goods__desc {
+  font-family: @font-2;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.more-goods__amount {
+  margin: 0;
+}
+
+.more-goods__price {
+  font-weight: 400;
+}
+
+.more-goods__stock {
+  width: 280px;
+  height: 289px;
+  position: relative;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-color: green;
+  padding-top: 187px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 61px;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/icon-gift.svg");
+  }
+}
+
+.more-goods__stock-text {
+  width: 170px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: @font-2;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+}
