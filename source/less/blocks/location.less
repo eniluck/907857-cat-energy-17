@@ -56,8 +56,6 @@
     width: 200px;
   }
 
-
-
   .location__partnership-adress {
     font-size: 16px;
     line-height: 20px;
@@ -78,5 +76,52 @@
   .location__map-image {
     width: 767px;
     height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location__map {
+    max-width: 1440px;
+    height: 400px;
+    width: auto;
+  }
+
+  .location__map-image {
+    width: auto;
+    max-width: 1440px;
+    height: 400px;
+
+  }
+
+  .location__partnership-row {
+    position: absolute;
+    top:95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    z-index: 20;
+    background-color: #ffffff;
+  }
+
+  .location .location__partnership-container {
+    padding-top: 0;
+    position: relative;
+    z-index: 10;
+    width: 1440px;
+  }
+
+  .location__partnership {
+    padding-top: 70px;
+    padding-left: 76px;
+    padding-right: 90px;
+    padding-bottom: 62px;
+  }
+
+  .location__partnership-adress {
+    text-align: left;
+  }
+
+  .location__partnership-adress {
+    width: 155px;
   }
 }
