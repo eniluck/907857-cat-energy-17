@@ -114,25 +114,26 @@
 }
 
 @media (min-width: @tablet-width) {
-/*
   .more-goods__title-wrapper {
     width: auto;
-    max-width: 1440px;
-  }
-  //ToDo: Переделать заголовок
-*/
+    max-width: @tablet-width;
+    margin-bottom: 48px;
 
-  .more-goods__title-wrapper {
-    width: @tablet-width;
-    &::before{
+    &::before {
       top: 46px;
     }
+  }
+
+  .more-goods__title-container {
+    width: @tablet-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
 
   .more-goods__title {
     font-size: 36px;
     line-height: 36px;
-    margin-left: @tablet-padding;
     padding-left: 37px;
     padding-right: 37px;
     top: 24px;
@@ -171,19 +172,8 @@
 
   .more-goods__desc {
     margin: 0;
-  }
-
-  .more-goods__item-row {
-    margin-bottom: 20px;
-  }
-
-  .more-goods__desc {
     font-size: 16px;
     line-height: 20px;
-  }
-
-  .more-goods__title-wrapper {
-    margin-bottom: 48px;
   }
 
   .more-goods__list {
