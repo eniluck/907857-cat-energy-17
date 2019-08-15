@@ -41,50 +41,50 @@
       </div>
     </div>
   </header>
-  <main class="page-main">
+  <main class="page-form">
     <div class="container">
-      <h1 class="page-main__header">Подбор программы</h1>
+      <h1 class="page-form__header">Подбор программы</h1>
     </div>
     <section class="program">
       <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="container">
           <p class="program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
-            <fieldset class="program__group program__group--main-info">
-              <legend class="visually-hidden">Основная информация о коте</legend>
-              <p class="program__input-row">
-                <label class="program__label" for="pet-name">Имя:*</label>
-                <input class="program__text-input" id="pet-name" type="text" name="pet-name" value="" placeholder="Барсик">
-              </p>
-              <p class="program__input-row">
-                <label class="program__label" for="pet-weight">Вес (кг):*</label>
-                <input class="program__text-input" id="pet-weight" type="text" name="pet-weight" value="" placeholder="7">
-              </p>
-              <p class="program__input-row">
-                <label class="program__label" for="pet-age">Возраст (лет):</label>
-                <input class="program__text-input" id="pet-age" type="text" name="pet-age" value="" placeholder="7">
-              </p>
-            </fieldset>
-          </div>
-
-          <fieldset class="program__group program__group--program">
-            <div class="program__group-row">
-              <div class="container">
-                <legend class="visually-hidden">Выберите программу:</legend>
-                <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-losing-weight" type="radio" name="program-selection" value="losing-weight">
-                  <label class="program__label" for="program-losing-weight">Похудение</label>
-                </p>
-                <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain" placeholder="7">
-                  <label class="program__label" for="program-mass-gain">Набор массы</label>
-                </p>
-                <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice" placeholder="7">
-                  <label class="program__label" for="program-need-advice">Не знаю (Нужен ваш совет)</label>
-                </p>
-              </div>
-            </div>
+          <fieldset class="program__group program__group--main-info">
+            <legend class="visually-hidden">Основная информация о коте</legend>
+            <p class="program__input-row">
+              <label class="program__label" for="pet-name">Имя:*</label>
+              <input class="program__text-input" id="pet-name" type="text" name="pet-name" value="" placeholder="Барсик">
+            </p>
+            <p class="program__input-row">
+              <label class="program__label" for="pet-weight">Вес (кг):*</label>
+              <input class="program__text-input" id="pet-weight" type="text" name="pet-weight" value="" placeholder="7">
+            </p>
+            <p class="program__input-row">
+              <label class="program__label" for="pet-age">Возраст (лет):</label>
+              <input class="program__text-input" id="pet-age" type="text" name="pet-age" value="" placeholder="7">
+            </p>
           </fieldset>
+        </div>
+
+        <fieldset class="program__group program__group--program">
+          <div class="program__group-row">
+            <div class="program__group-container">
+              <legend class="visually-hidden">Выберите программу:</legend>
+              <p class="program__input-row">
+                <input class="visually-hidden program__radio-input" id="program-losing-weight" type="radio" name="program-selection" value="losing-weight">
+                <label class="program__label" for="program-losing-weight">Похудение</label>
+              </p>
+              <p class="program__input-row">
+                <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain" placeholder="7">
+                <label class="program__label" for="program-mass-gain">Набор массы</label>
+              </p>
+              <p class="program__input-row">
+                <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice" placeholder="7">
+                <label class="program__label" for="program-need-advice">Не знаю (Нужен ваш совет)</label>
+              </p>
+            </div>
+          </div>
+        </fieldset>
 
         <fieldset class="program__group program__group--owner">
           <div class="program__group-title-wrapper">
@@ -142,7 +142,6 @@
         </fieldset>
         <div class="container">
           <button class="program__button button" type="submit">Отправить заявку</button>
-
           <p class="program__footnote">* — Обязательные поля</p>
         </div>
       </form>
