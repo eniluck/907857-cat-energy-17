@@ -40,14 +40,16 @@
 
 .program__text-input {
   width: 100%;
-  padding: 12px 13px;
+  padding: 12px 12px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   //border-color: red;
+  border: 2px solid red;
 }
 
+//стилизация radiobutton
 .program__radio-input + .program__label {
   padding-left: 46px;
   padding-top: 6px;
@@ -58,10 +60,23 @@
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 0;
+    left: -1px;
     top: 0;
     border-radius: 50%;
     border: 1px solid #cdcdcd;
+  }
+}
+
+.program__radio-input:checked  + .program__label {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 9px;
+    top: 9px;
+    border-radius: 50%;
+    background-color: #68b738;
   }
 }
 
@@ -123,4 +138,94 @@
   line-height: 24px;
   color: #111111;
   max-width: 185px;
+}
+
+.program__group--owner .program__input-row-container {
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.program__text-input.program__text-input--email {
+  padding-right: 36px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: right 13px top 14px;
+}
+
+.program__text-input.program__text-input--phone {
+  padding-right: 36px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-position: right 11px top 12px;
+}
+
+.program__group--comment .program__input-row-container {
+  padding-top: 5px;
+  padding-bottom: 16px;
+}
+
+.program__textarea {
+  box-sizing: border-box;
+  width: 280px;
+  height: 150px;
+  opacity: 0.5;
+  border: solid 1px #cdcdcd;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  padding-right: 0;
+  text-transform: uppercase;
+}
+
+
+.program__group--additional .program__input-row-container {
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+
+//Стилизация checkbox
+.program__checkbox-input + .program__label {
+  padding-left: 46px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 0px;
+    top: 0;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.program__checkbox-input:checked  + .program__label {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 17px;
+    left: 4px;
+    top: 8px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.program__button {
+  margin-bottom: 21px;
+}
+
+.program__footnote {
+  font-family: @font-2;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
 }
