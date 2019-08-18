@@ -205,7 +205,6 @@
   text-transform: uppercase;
 }
 
-
 .program__group--additional .program__input-row-container {
   padding-top: 4px;
   padding-bottom: 10px;
@@ -447,5 +446,120 @@
     line-height: 20px;
     width: 283px;
     height: 52px;
+    margin-right: 65px;
+  }
+
+  .program__button-block {
+    width: 628px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .program__footnote {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program__main-info-row {
+    display: flex;
+    width: @desktop-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .program__group-main-info {
+    width: 570px;
+    margin-left: unset;
+    margin-right: auto;
+  }
+
+  .program__group-row {
+    width: 568px;
+  }
+
+  .program__group-container {
+    width: 515px;
+  }
+
+  //заголовок
+  .program__group-title-wrapper {
+    width: auto;
+    max-width: @desktop-max-width;
+
+    &::before{
+      top: 22px;
+    }
+  }
+
+  .program__group-title-container {
+    width: @desktop-content;
+  }
+
+  .program__group.program__group--main-info {
+    margin-bottom: 0;
+  }
+
+  .program__group.program__group--program {
+    margin-bottom: 70px;
+  }
+
+  .program__group--owner .program__input-row-container {
+    display: flex;
+    width: @desktop-content;
+    justify-content: space-between;
+  }
+
+  .program__text-input--email {
+    width: 428px;
+    background-position: right 18px top 18px;
+  }
+
+  .program__text-input.program__text-input--phone {
+    width: 416px;
+    background-position: right 18px top 15px;
+    padding-left: 15px;
+  }
+
+  .program__label[for="cat-owner-email"] {
+    margin-right: 22px;
+  }
+
+  .program__group--comment .program__input-row-container {
+    width: @desktop-content;
+  }
+
+  .program__textarea {
+    width: 1220px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .program__group--comment .program__input-row-container {
+    padding-bottom: 56px;
+  }
+
+  .program__group--additional .program__input-row-container {
+    width: @desktop-content;
+  }
+
+  .program__group--additional .program__input-row {
+    width: 243px;
+  }
+
+  .program__group--additional .program__input-row-container {
+    padding-bottom: 19px;
+  }
+
+  .program__button-block {
+    width: @desktop-content;
+    margin-bottom: 62px;
+  }
+
+  .program__button {
+    width: 569px;
+    margin-right: 83px;
   }
 }
