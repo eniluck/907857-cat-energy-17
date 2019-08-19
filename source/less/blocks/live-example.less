@@ -110,8 +110,7 @@
 }
 
 .live-example__image-cutter {
-  //background-color: #f2f2f2;
-  background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @before-img-background @top-margin, @before-img-background 100%);
+  background-color: #f2f2f2;
 }
 
 .live-example__carousel-image--after {
@@ -180,6 +179,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .live-example__image-cutter {
+    //background-color: #f2f2f2;
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @before-img-background @top-margin, @before-img-background 100%);
+  }
+
   .live-example__preview {
     position: static;
     left: unset;
