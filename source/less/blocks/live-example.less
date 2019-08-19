@@ -110,7 +110,8 @@
 }
 
 .live-example__image-cutter {
-  background-color: #f2f2f2;
+  //background-color: #f2f2f2;
+  background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @before-img-background @top-margin, @before-img-background 100%);
 }
 
 .live-example__carousel-image--after {
@@ -202,7 +203,7 @@
     font-size: 60px;
     line-height: 60px;
     color: #111111;
-    margin-bottom: 63px;
+    margin-bottom: 65px;
   }
 
   .live-example__info {
@@ -239,10 +240,12 @@
     line-height: 14px;
     padding-left: 7px;
     padding-right: 7px;
+    bottom: -13px;
   }
 
   .live-example__cost {
-    margin-top: 10px;
+    margin-top: 11px;
+    margin-right: 2px;
     font-size: 20px;
     line-height: 20px;
     text-align: right;
@@ -260,6 +263,19 @@
     display: inline;
   }
 
+  .live-example__preview {
+    position: relative;
+  }
+
+  .live-example__preview-background {
+    position: absolute;
+    width: 100vh;
+    height: 419px;
+    top: 170px;
+    background-color: red;
+    background: linear-gradient(to right, @before-img-background 0, @before-img-background 354px, @after-img-background 354px, @after-img-background 100%);
+  }
+
   .live-example__carousel {
     height: 517px;
     width: 100%;
@@ -267,7 +283,6 @@
     position: relative;
     margin-bottom: 26px;
   }
-
 
   .live-example__carousel-image {
     max-width: unset;
@@ -291,6 +306,7 @@
   .live-example__carousel-image--after {
     width: 690px;
     bottom: -1px;
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @after-img-background @top-margin, #eaeaea 100%);
   }
 
   .live-example__carousel-image--before {
