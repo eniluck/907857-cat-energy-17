@@ -182,12 +182,16 @@
   .live-example__image-cutter {
     //background-color: #f2f2f2;
     background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @before-img-background @top-margin, @before-img-background 100%);
+    max-width: 338px; //тут изменяем изображение открывается
+    overflow: hidden;
+    height: 517px;
   }
 
   .live-example__preview {
-    position: static;
-    left: unset;
+    //position: static;
+    left: auto;
     width: @tablet-content;
+    position: relative;
   }
 
   .live-example__row {
@@ -267,16 +271,12 @@
     display: inline;
   }
 
-  .live-example__preview {
-    position: relative;
-  }
-
   .live-example__preview-background {
     position: absolute;
     width: 100vh;
     height: 419px;
     top: 170px;
-    background-color: red;
+    //background-color: red;
     background: linear-gradient(to right, @before-img-background 0, @before-img-background 354px, @after-img-background 354px, @after-img-background 100%);
   }
 
@@ -299,12 +299,6 @@
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .live-example__image-cutter {
-    max-width: 338px; //тут изменяем изображение открывается
-    overflow: hidden;
-    height: 517px;
   }
 
   .live-example__carousel-image--after {
