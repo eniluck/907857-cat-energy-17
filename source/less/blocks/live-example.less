@@ -6,12 +6,16 @@
 }
 
 .live-example__preview {
-  position: relative;
-  left: -20px;
   width: @mobile-width;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
+}
+
+.live-example__text-info {
+  width: @mobile-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .live-example__title {
@@ -96,28 +100,25 @@
   margin-bottom: 36px;
 }
 
-.live-example__carousel {
-  margin-bottom: 32px;
-  position: relative;
-  width: 320px;
-  height: 240px;
-}
-
 .live-example__image-container {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.live-example__image-cutter {
   background-color: #f2f2f2;
 }
 
-.live-example__carousel-image--after {
+.live-example__carousel {
+  position: relative;
+  //width: 320px;
+  height: 240px;
+  margin-bottom: 33px;
+}
+
+.live-example__image-container--after {
   z-index: 10;
 }
 
-.live-example__carousel-image--before {
+.live-example__image-container--before {
   z-index: 20;
 }
 
@@ -154,7 +155,9 @@
   width: 35px;
   height: 6px;
   border-radius: 3px;
+  border: none;
   background-color: #68b738;
+  padding: 0;
 }
 
 .live-example__slider-before-after {
@@ -179,23 +182,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .live-example__image-cutter {
-    //background-color: #f2f2f2;
-    background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @before-img-background @top-margin, @before-img-background 100%);
-    max-width: 338px; //тут изменяем изображение открывается
-    overflow: hidden;
-    height: 517px;
+  .live-example__text-info {
+    width: @tablet-content;
+    margin-bottom: 220px;
+  }
+
+  //Нужно для background на tablet во всю ширину
+  .live-example__preview-container {
+    max-width: @tablet-width;
+    background: linear-gradient(to right, @before-img-background 0, @before-img-background 50%, @after-img-background 50%, @after-img-background 100%);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .live-example__preview {
-    //position: static;
-    left: auto;
-    width: @tablet-content;
+    //width: @tablet-content;
+    width: 572px; //для отображения на desktop без прокрутки
     position: relative;
-  }
-
-  .live-example__row {
-    padding-bottom: 42px;
+    padding-bottom: 80px;
   }
 
   .live-example__carousel-image--hidden {
@@ -279,45 +283,30 @@
     display: inline;
   }
 
-  .live-example__preview-background {
-    position: absolute;
-    width: 100vh;
-    height: 419px;
-    top: 170px;
-    //background-color: red;
-    background: linear-gradient(to right, @before-img-background 0, @before-img-background 354px, @after-img-background 354px, @after-img-background 100%);
-  }
-
   .live-example__carousel {
-    height: 517px;
-    width: 100%;
-    padding-left: 15px;
+    height: 348px;
     position: relative;
-    margin-bottom: 26px;
-  }
-
-  .live-example__carousel-image {
-    max-width: unset;
-    width: 690px;
-    height: auto;
+    left: -52px; //  Я художник! Я так вижу...
+    margin-bottom: 27px;
   }
 
   .live-example__image-container {
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
+    background: none;
+    height: 517px;
+    width: 100%;
   }
 
-  .live-example__carousel-image--after {
+  .live-example__carousel-image {
     width: 690px;
-    bottom: -1px;
-    background: linear-gradient(to bottom, #ffffff 0, #ffffff @top-margin, @after-img-background @top-margin, #eaeaea 100%);
+    max-width: none; //переопределяем поведение заданное для всех тегов img
   }
 
-  .live-example__carousel-image--before {
-    width: 690px;
-    bottom: 1px;
+  .live-example__image-container--before {
+    clip: rect(0, @slider-position-tablet, 517px, 0); // Изменяем значение 338px - получаем обрезку изображения
+  }
+
+  .live-example__image-container--after {
+    clip: rect(0, 690px, 517px, @slider-position-tablet);
   }
 
   .live-example__slider-before-after {
@@ -349,11 +338,11 @@
 
   .live-example__slider-control {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     left: 50%;
-    transform: translate(-50%, -50%);
     top: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
@@ -391,12 +380,21 @@
   }
 
   .live-example__title {
-    margin-bottom: 145px;
+    margin-bottom: 76px;
+    //margin-top: 10px;
+  }
+
+  .live-example__text-info {
+    width: auto;
+    margin-left: initial;
+    margin-right: initial;
+    padding-top: 54px;
+    margin-bottom: 0;
   }
 
   .live-example__info {
     width: 435px;
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 
   .live-example__result {
@@ -412,7 +410,7 @@
     display: inline-block;
 
     &:nth-child(1) {
-      margin-right: 64px;
+      margin-right: 59px;
     }
   }
 
@@ -420,7 +418,32 @@
     margin-bottom: 50px;
   }
 
-  .live-example__row {
+  .live-example__container {
     display: flex;
+    width: @desktop-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: @before-img-background;
+    justify-content: space-between;
+  }
+
+  .live-example__preview-container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -23px;
+    background: none;
+  }
+
+  .live-example__carousel {
+    left: -79px;
+    margin-bottom: 47px;
+  }
+
+  .live-example__image-container--before {
+    clip: rect(0, @slider-position-desktop, 517px, 0); // Изменяем значение 338px - получаем обрезку изображения
+  }
+
+  .live-example__image-container--after {
+    clip: rect(0, 690px, 517px, @slider-position-desktop);
   }
 }
