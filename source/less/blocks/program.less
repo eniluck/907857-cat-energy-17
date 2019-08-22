@@ -69,6 +69,7 @@
 }
 
 .program__text-input {
+  box-sizing: border-box;
   width: 100%;
   padding: 12px 12px;
   padding-left: 15px;
@@ -78,6 +79,22 @@
   color: #444444;
   //border-color: red;
   border: 1px solid rgba(205, 205, 205, 50%);
+
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 100%);
+  }
+
+  &:active {
+    outline: none;
+    border: 1px solid #444444;
+    box-shadow: 0 0 0 2px #444444 inset;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #444444;
+    box-shadow: 0 0 0 2px #444444 inset;
+  }
 }
 
 //стилизация radiobutton
@@ -95,6 +112,14 @@
     top: 0;
     border-radius: 50%;
     border: 1px solid #cdcdcd;
+  }
+
+  &:hover::after{
+    border-color: #bababa;
+  }
+
+  &:active{
+    opacity: 0.3;
   }
 }
 
@@ -190,7 +215,6 @@
   box-sizing: border-box;
   width: 280px;
   height: 150px;
-  opacity: 0.5;
   border: solid 1px #cdcdcd;
   font-size: 16px;
   line-height: 18px;
@@ -198,8 +222,25 @@
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 14px;
-  padding-right: 0;
+  padding-right: 10px;
   text-transform: uppercase;
+  border: 1px solid rgba(205, 205, 205, 50%);
+
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 100%);
+  }
+
+  &:active {
+    outline: none;
+    border: 1px solid #444444;
+    box-shadow: 0 0 0 2px #444444 inset;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #444444;
+    box-shadow: 0 0 0 2px #444444 inset;
+  }
 }
 
 .program__group--additional .program__input-row-container {
