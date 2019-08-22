@@ -12,6 +12,21 @@
   padding-bottom: 21px;
 }
 
+.social__item {
+  & svg {
+    fill: #666666;
+  }
+
+  &:hover svg{
+    fill: #68b738;
+  }
+
+  &:active svg{
+    opacity: 0.3;
+    fill: #68b738;
+  }
+}
+/*
 .social__link {
   display: block;
   background-repeat: no-repeat;
@@ -34,7 +49,7 @@
     height: 18px;
     background-image: url("../img/icon-fb.svg");
   }
-}
+}*/
 
 .social__item {
   &:not(:last-child) {
