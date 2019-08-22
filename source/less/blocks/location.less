@@ -1,5 +1,5 @@
-.location__map {
-  width: @mobile-width;
+.location__map-container {
+  max-width: @mobile-width;
   margin-left: auto;
   margin-right: auto;
   height: 362px;
@@ -68,26 +68,27 @@
     margin-top: 20px;
   }
 
-  .location__map {
-    width: 767px;
+  .location__map-container {
+    max-width: 767px;
     height: 400px;
   }
 
   .location__map-image {
-    width: 767px;
+    width: 100%;
+    max-width: 767px;
     height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .location__map {
+  .location__map-container {
     max-width: 1440px;
     height: 400px;
     width: auto;
   }
 
   .location__map-image {
-    width: auto;
+    width: 100%;
     max-width: 1440px;
     height: 400px;
   }
