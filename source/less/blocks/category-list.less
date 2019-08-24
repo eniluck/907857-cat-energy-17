@@ -52,6 +52,7 @@
 }
 
 .category-list__item-link {
+  display: inline-block;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -66,8 +67,25 @@
     width: 25px;
     height: 12px;
     right: -25px - 11px;
-    top: 7px;
+    top: 3px;
     background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    width: 34px;
+    right: -34px - 11px - 12px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active::after {
+    width: 34px;
+    right: -34px - 11px - 12px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -86,7 +104,7 @@
       width: 240px;
       height: 1px;
       left: 0;
-      top: -16px;
+      top: -19px;
       background-color: #d9d9d9;
     }
   }
@@ -111,12 +129,13 @@
     font-size: 36px;
     line-height: 37px;
     color: #111111;
-    margin-bottom: 10px;
+    margin-bottom: 26px;
     margin-top: 0;
+    padding-left: 0;
   }
 
   .category-list__item-image {
-    left: unset;
+    left: auto;
   }
 
   .category-list__item-image--pro {
@@ -138,6 +157,8 @@
     line-height: 24px;
     color: #444444;
     margin-bottom: 56px;
+    display: block;
+    margin-top: 0;
   }
 
   .category-list__item-link {
@@ -147,7 +168,7 @@
 
     &::after {
       right: -47px;
-      top: 9px;
+      top: 4px;
     }
   }
 
@@ -165,14 +186,13 @@
       background-color: #68b738;
       top: 90px;
       right: 62px;
-      left: unset;
+      left: auto;
       border-radius: 50%;
     }
+  }
 
-    &:nth-child(2) .category-list__item-desc {
-      display: inline-block;
-      width: 340px;
-    }
+  .category-list__item-desc--mass-gain {
+    width: 340px;
   }
 }
 
@@ -222,9 +242,13 @@
   .category-list__item-title {
     font-size: 36px;
     line-height: 37px;
-    margin-bottom: 59px;
+    margin-bottom: 74px;
     margin-left: 163px;
     margin-top: 30px;
+  }
+
+  .category-list__item-desc--mass-gain {
+    width: auto;
   }
 
   .category-list__item-desc {

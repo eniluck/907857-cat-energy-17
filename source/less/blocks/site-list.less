@@ -15,6 +15,14 @@
 .site-list__item a {
   text-decoration: none;
   color: #111111;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .site-list__item {
@@ -78,5 +86,9 @@
 
   .site-list--index .site-list__item--active::after {
     background-color: #ffffff;
+  }
+
+  .site-list__item--active::after {
+    bottom: 13px;
   }
 }
