@@ -18,12 +18,9 @@ var sliderControlContainer = document.querySelector('.live-example__slider-befor
 var sliderControl = document.querySelector('.live-example__slider-control');
 
 var carouselControls = document.querySelector('.live-example__carousel-controls');
-var preview = document.querySelector('.live-example__preview');
-var previewContainer = document.querySelector('.live-example__preview-container');
-var previewRow = document.querySelector('.live-example__preview-row');
-var container = document.querySelector('.live-example__container');
-var row = document.querySelector('.live-example__row');
 
+var MinX = 0;
+var MaxX = sliderControlContainer.clientWidth;
 
 //Before click
 sliderBeforeBtn.addEventListener('click', function() {
@@ -45,13 +42,19 @@ sliderAfterBtn.addEventListener('click', function() {
   }
 });
 
-//slider mouse move control
+//slider mouse move control ( Если останется время )
+/*
+var preview = document.querySelector('.live-example__preview');
+var previewContainer = document.querySelector('.live-example__preview-container');
+var previewRow = document.querySelector('.live-example__preview-row');
+var container = document.querySelector('.live-example__container');
+var row = document.querySelector('.live-example__row');
+
 var isDown = false;
 var offsetX = 0;
-var MinX = 0;
-var MaxX = sliderControlContainer.clientWidth;
-var x_current = 100;
 
+var x_current = 100;
+/*
 sliderControlContainer.addEventListener('mousedown', function(e) {
   isDown = true;
   offsetX = sliderControlContainer.offsetLeft - e.clientX;
@@ -83,3 +86,4 @@ sliderControlContainer.addEventListener('mousemove', function (e) {
 
   }
 });
+*/
