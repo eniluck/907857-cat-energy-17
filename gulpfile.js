@@ -51,4 +51,3 @@ gulp.task("server", function () {
 gulp.task("images", gulp.series("svgo", "webp"));
 
 gulp.task("start", gulp.series("css", "server"));
-
