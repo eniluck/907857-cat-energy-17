@@ -7,6 +7,20 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var webp = require('gulp-webp');
+var svgo = require('gulp-svgo');
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("svgo", function () {
+  return gulp.src("source/img/**/*.svg")
+    .pipe(svgo())
+    .pipe(gulp.dest("source/img"));
+});
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -34,4 +48,7 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("images", gulp.series("svgo", "webp"));
+
 gulp.task("start", gulp.series("css", "server"));
+
