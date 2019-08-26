@@ -20,7 +20,11 @@
   }
 }
 
-.button-burger--closed::before {
+.button-burger--closed{
   width: 25px;
-  background: url("../img/icon-mobile-menu.svg") no-repeat;
+
+  &::before {
+    width: 25px;
+    background: url("../img/icon-mobile-menu.svg") no-repeat;
+  }
 }
