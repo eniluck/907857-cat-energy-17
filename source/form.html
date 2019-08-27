@@ -75,30 +75,32 @@
             </fieldset>
           </div>
 
-          <fieldset class="program__group program__group--program">
+          <div class="program__group program__group--program">
             <div class="program__group-row">
-              <div class="program__group-container">
+              <fieldset class="program__group-container">
                 <legend class="visually-hidden">Выберите программу:</legend>
                 <p class="program__input-row">
                   <input class="visually-hidden program__radio-input" id="program-losing-weight" type="radio" name="program-selection" value="losing-weight" checked="">
                   <label class="program__label" for="program-losing-weight">Похудение</label>
                 </p>
                 <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain" placeholder="7">
+                  <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain">
                   <label class="program__label" for="program-mass-gain">Набор массы</label>
                 </p>
                 <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice" placeholder="7">
+                  <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice">
                   <label class="program__label" for="program-need-advice">Не знаю (Нужен ваш совет)</label>
                 </p>
+              </fieldset>
             </div>
           </div>
-        </fieldset>
         </div>
+
         <fieldset class="program__group program__group--owner">
+          <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
           <div class="program__group-title-wrapper">
             <div class="program__group-title-container">
-              <legend class="program__group-title">Контактные данные (владельца кота)</legend>
+              <h3 class="program__group-title">Контактные данные (владельца кота)</h3>
             </div>
           </div>
           <div class="program__input-row-container">
@@ -124,9 +126,10 @@
         </fieldset>
 
         <fieldset class="program__group program__group--comment">
+          <legend class="visually-hidden">Комментарий</legend>
           <div class="program__group-title-wrapper">
             <div class="program__group-title-container">
-              <legend class="program__group-title">Комментарий</legend>
+              <h3 class="program__group-title">Комментарий</h3>
             </div>
           </div>
           <div class="program__input-row-container">
@@ -135,9 +138,10 @@
         </fieldset>
 
         <fieldset class="program__group program__group--additional">
+          <legend class="visually-hidden">Дополнительно</legend>
           <div class="program__group-title-wrapper">
             <div class="program__group-title-container">
-              <legend class="program__group-title">Дополнительно</legend>
+              <h3 class="program__group-title">Дополнительно</h3>
             </div>
           </div>
           <div class="program__input-row-container">
