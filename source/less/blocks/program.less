@@ -152,7 +152,7 @@
 
 //заголовок с линией
 .program__group-title-wrapper {
-  width: auto;
+  width: 100%;
   max-width: @mobile-width;
   margin-left: auto;
   margin-right: auto;
@@ -171,6 +171,7 @@
 }
 
 .program__group-title-container {
+  display: block;
   width: @mobile-content;
   margin-left: auto;
   margin-right: auto;
@@ -193,6 +194,7 @@
   max-width: 185px;
   margin: 0;
   margin-bottom: 30px;
+  font-style: normal;
 }
 
 .program__group--owner .program__input-row-container {
@@ -411,7 +413,6 @@
 
   //заголовок
   .program__group-title-wrapper {
-    width: auto;
     max-width: @tablet-width;
 
     &::before {
@@ -570,7 +571,6 @@
 
   //заголовок
   .program__group-title-wrapper {
-    width: auto;
     max-width: @desktop-max-width;
 
     &::before {

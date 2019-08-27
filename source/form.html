@@ -51,6 +51,7 @@
       <h1 class="page-form__header">Подбор программы</h1>
     </div>
     <section class="program">
+      <h2 class="program__form-title visually-hidden">Программа питания для кота</h2>
       <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="container">
           <p class="program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -97,12 +98,11 @@
         </div>
 
         <fieldset class="program__group program__group--owner">
-          <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <h3 class="program__group-title">Контактные данные (владельца кота)</h3>
-            </div>
-          </div>
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Контактные данные (владельца кота)</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <p class="program__input-row">
               <label class="program__label" for="cat-owner-email">E-mail:*</label>
@@ -126,24 +126,22 @@
         </fieldset>
 
         <fieldset class="program__group program__group--comment">
-          <legend class="visually-hidden">Комментарий</legend>
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <h3 class="program__group-title">Комментарий</h3>
-            </div>
-          </div>
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Комментарий</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <textarea class="program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
 
         <fieldset class="program__group program__group--additional">
-          <legend class="visually-hidden">Дополнительно</legend>
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <h3 class="program__group-title">Дополнительно</h3>
-            </div>
-          </div>
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Дополнительно</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <p class="program__input-row">
               <input class="program__checkbox-input visually-hidden" type="checkbox" name="additional" value="sweetener" id="sweetener" checked="">
