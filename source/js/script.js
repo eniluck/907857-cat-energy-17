@@ -1,5 +1,8 @@
 /*Menu*/
 
+var pageHeader = document.querySelector('.page-header');
+pageHeader.classList.remove('page-header--nojs');
+
 var menuBtn = document.querySelector('.button-burger');
 var menu = document.querySelector('.main-nav');
 
