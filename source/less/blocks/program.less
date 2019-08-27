@@ -152,11 +152,14 @@
 
 //заголовок с линией
 .program__group-title-wrapper {
+  display: block;
   width: 100%;
   max-width: @mobile-width;
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-left: auto;
+  margin-right: auto;-*/
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
   &::before {
     content: "";
@@ -425,7 +428,7 @@
   }
 
   .program__group-title {
-    max-width: unset;
+    max-width: none;
     font-size: 36px;
     line-height: 36px;
     padding-left: 40px;
