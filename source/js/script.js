@@ -12,8 +12,8 @@ menuBtn.addEventListener('click', function() {
 });
 
 /*slider*/
-var sliderBeforeBtn = document.querySelector('.live-example__button--control-before');
-var sliderAfterBtn = document.querySelector('.live-example__button--control-after');
+var sliderBeforeBtn = document.querySelector('.live-example__button-control--before');
+var sliderAfterBtn = document.querySelector('.live-example__button-control--after');
 
 var sliderBeforeImg = document.querySelector('.live-example__image-container--before');
 var sliderAfterImg = document.querySelector('.live-example__image-container--after');

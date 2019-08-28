@@ -137,6 +137,12 @@
   }
 }
 
+.program__radio-input:focus + .program__label {
+  &::after {
+    border-color: #bababa;
+  }
+}
+
 .program__radio-input:checked + .program__label {
   &::before {
     content: "";
@@ -302,6 +308,12 @@
     &::after {
       border: 1px solid #bababa;
     }
+  }
+}
+
+.program__checkbox-input:focus + .program__label {
+  &::after {
+    border: 1px solid #bababa;
   }
 }
 
