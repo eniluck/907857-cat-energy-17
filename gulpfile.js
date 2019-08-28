@@ -7,18 +7,18 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var webp = require('gulp-webp');
-var svgo = require('gulp-svgo');
-var csso = require('gulp-csso');
-var rename = require('gulp-rename');
+var webp = require("gulp-webp");
+var svgo = require("gulp-svgo");
+var csso = require("gulp-csso");
+var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
-var uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
-var htmlmin = require('gulp-htmlmin');
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -114,16 +114,16 @@ gulp.task("clean", function() {
   return del("build");
 })
 
-gulp.task('compress', function () {
+gulp.task("compress", function () {
   return pipeline(
-        gulp.src('source/js/*.js'),
+        gulp.src("source/js/*.js"),
         uglify(),
         rename(
           function (path) {
             path.basename += ".min";
           }
         ),
-        gulp.dest('build/js')
+        gulp.dest("build/js")
   );
 });
 

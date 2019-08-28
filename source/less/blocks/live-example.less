@@ -45,23 +45,23 @@
 
 .live-example__indicator-item {
   width: 122px;
-  height: 54px;
   border-radius: 3px;
   border: solid 1px #cdcdcd;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .live-example__indicator-number {
+  max-width: 120px;
   font-size: 24px;
   line-height: 24px;
   color: #111111;
   text-transform: uppercase;
-  position: absolute;
   top: 12px;
-  left: 50%;
-  transform: translate(-50%);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 13px;
+  margin-bottom: 9px;
 }
 
 .live-example__indicator-desc {
@@ -69,17 +69,12 @@
   font-size: 12px;
   line-height: 12px;
   color: #444444;
-  position: absolute;
-  margin-top: 0;
-  margin-bottom: 0;
-  bottom: -12px;
-  left: 50%;
-  transform: translate(-50%);
   width: 60px;
-  height: 21px;
   text-align: center;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0;
+  margin-bottom: -16px;
   background-color: #f2f2f2;
 }
 
@@ -228,13 +223,12 @@
 
   .live-example__indicator-item {
     width: 160px;
-    height: 70px;
   }
 
   .live-example__indicator-number {
     font-size: 30px;
     line-height: 37px;
-    top: 14px;
+    margin-top: 15px;
   }
 
   .live-example__result {
@@ -253,9 +247,10 @@
     line-height: 14px;
     padding-left: 7px;
     padding-right: 7px;
-    bottom: -13px;
     background-color: #ffffff;
     text-align: center;
+    margin-top: 1px;
+    margin-bottom: -7px;
   }
 
   .live-example__indicator-desc--weight {
@@ -326,6 +321,7 @@
   .live-example__button-control {
     font-size: 20px;
     line-height: 20px;
+    top: -6px;
 
     &::after {
       content: "";
@@ -351,7 +347,15 @@
 
     &:focus {
       outline: none;
+
+      &::after {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
     }
+  }
+
+  .live-example__button-control--before {
+    left: -25px;
   }
 
   .live-example__slider-control {
@@ -389,6 +393,7 @@
 
     &:focus {
       outline: none;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
   }
 
@@ -433,7 +438,7 @@
 
   .live-example__info {
     width: 435px;
-    margin-bottom: 67px;
+    margin-bottom: 69px;
   }
 
   .live-example__result {
