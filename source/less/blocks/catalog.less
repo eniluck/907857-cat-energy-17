@@ -1,6 +1,7 @@
 .catalog {
   background-color: #ffffff;
   font-family: @font-main;
+  overflow-x: hidden; //ie 11
 }
 
 .catalog__list {
@@ -28,6 +29,11 @@
   text-transform: uppercase;
 }
 
+.catalog__product-link {
+  text-decoration: none;
+  color: #111111;
+}
+
 .catalog__description {
   font-family: @font-2;
   font-size: 12px;
@@ -52,6 +58,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .catalog__more {

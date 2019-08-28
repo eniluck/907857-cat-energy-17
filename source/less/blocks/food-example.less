@@ -1,3 +1,7 @@
+.food-example {
+  overflow-x: hidden; //ie 11
+}
+
 .food-example__row {
   position: relative;
   z-index: 100;
@@ -70,6 +74,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .food-example {
+    overflow-x: visible; //ie 11
+  }
+
   .food-example__row {
     padding-top: 17px;
 

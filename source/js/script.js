@@ -1,5 +1,8 @@
 /*Menu*/
 
+var pageHeader = document.querySelector('.page-header');
+pageHeader.classList.remove('page-header--nojs');
+
 var menuBtn = document.querySelector('.button-burger');
 var menu = document.querySelector('.main-nav');
 
@@ -9,8 +12,8 @@ menuBtn.addEventListener('click', function() {
 });
 
 /*slider*/
-var sliderBeforeBtn = document.querySelector('.live-example__button--control-before');
-var sliderAfterBtn = document.querySelector('.live-example__button--control-after');
+var sliderBeforeBtn = document.querySelector('.live-example__button-control--before');
+var sliderAfterBtn = document.querySelector('.live-example__button-control--after');
 
 var sliderBeforeImg = document.querySelector('.live-example__image-container--before');
 var sliderAfterImg = document.querySelector('.live-example__image-container--after');

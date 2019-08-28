@@ -15,7 +15,7 @@
     <include src="build/img/sprite.svg"></include>
   </svg>
 
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="container">
       <div class="page-header__row">
         <div class="page-header__logo-wrapper">
@@ -47,12 +47,13 @@
     </div>
   </header>
   <main class="page-form">
-    <div class="container">
+    <div class="page-form__container container">
       <h1 class="page-form__header">Подбор программы</h1>
     </div>
     <section class="program">
+      <h2 class="program__form-title visually-hidden">Программа питания для кота</h2>
       <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="container">
+        <div class="program__desc-container container">
           <p class="program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
         </div>
 
@@ -75,32 +76,33 @@
             </fieldset>
           </div>
 
-          <fieldset class="program__group program__group--program">
+          <div class="program__group program__group--program">
             <div class="program__group-row">
-              <div class="program__group-container">
-                <legend class="visually-hidden">Выберите программу:</legend>
+              <fieldset class="program__group-container">
+                <legend class="program__group-legend visually-hidden">Выберите программу:</legend>
                 <p class="program__input-row">
                   <input class="visually-hidden program__radio-input" id="program-losing-weight" type="radio" name="program-selection" value="losing-weight" checked="">
                   <label class="program__label" for="program-losing-weight">Похудение</label>
                 </p>
                 <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain" placeholder="7">
+                  <input class="visually-hidden program__radio-input" id="program-mass-gain" type="radio" name="program-selection" value="mass-gain">
                   <label class="program__label" for="program-mass-gain">Набор массы</label>
                 </p>
                 <p class="program__input-row">
-                  <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice" placeholder="7">
+                  <input class="visually-hidden program__radio-input" id="program-need-advice" type="radio" name="program-selection" value="need-advice">
                   <label class="program__label" for="program-need-advice">Не знаю (Нужен ваш совет)</label>
                 </p>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <fieldset class="program__group program__group--owner">
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <legend class="program__group-title">Контактные данные (владельца кота)</legend>
+              </fieldset>
             </div>
           </div>
+        </div>
+
+        <fieldset class="program__group program__group--owner">
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Контактные данные (владельца кота)</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <p class="program__input-row">
               <label class="program__label" for="cat-owner-email">E-mail:*</label>
@@ -124,22 +126,22 @@
         </fieldset>
 
         <fieldset class="program__group program__group--comment">
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <legend class="program__group-title">Комментарий</legend>
-            </div>
-          </div>
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Комментарий</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <textarea class="program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
 
         <fieldset class="program__group program__group--additional">
-          <div class="program__group-title-wrapper">
-            <div class="program__group-title-container">
-              <legend class="program__group-title">Дополнительно</legend>
-            </div>
-          </div>
+          <legend class="program__group-title-wrapper">
+            <span class="program__group-title-container">
+              <i class="program__group-title">Дополнительно</i>
+            </span>
+          </legend>
           <div class="program__input-row-container">
             <p class="program__input-row">
               <input class="program__checkbox-input visually-hidden" type="checkbox" name="additional" value="sweetener" id="sweetener" checked="">
@@ -179,7 +181,7 @@
         </div>
       </div>
       <div class="location__map">
-        <div class="location__map-container">
+        <div class="location__map-container" id="location__map-container">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -194,7 +196,7 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-footer__row-container container">
       <div class="page-footer__row">
         <span class="page-footer__logo">
           <svg width="128" height="24">
@@ -245,6 +247,9 @@
       </div>
     </div>
   </footer>
+  <script src="js/picturefill.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=5ea9f089-b809-4b26-a287-1cae837564ee"></script>
+  <script src="js/map.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
-<script src="js/script.min.js"></script>
 </html>
